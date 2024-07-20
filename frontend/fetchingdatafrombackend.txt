@@ -1,0 +1,24 @@
+import { useState,useEffect } from 'react'
+function App() {
+
+  const [backendData,setBackendData] = useState([{}])
+  useEffect(()=>{
+    fetch('/api').then(
+      res => res.json()
+    ).then(data =>  setBackendData(data)
+    )
+  },[])
+  return (
+    <>
+      <h1>Example Page</h1>
+      <p> The backend data is : </p>
+      <ul>
+        {backendData.map((item, index) => (
+          <li key={index}>{item.name}</li>
+        ))}
+      </ul>
+    </>
+  )
+}
+
+export default App
