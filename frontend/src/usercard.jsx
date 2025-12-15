@@ -6,7 +6,7 @@ import { useState,useEffect } from 'react';
 function UserCard({rollno}) {
   const [backendData,setBackendData] = useState(null);
   useEffect(()=>{
-    fetch(`http://localhost:3000/user/${rollno}`).then(
+    fetch(`https://attendanceportalbackend.onrender.com/user/${rollno}`).then(
       res=> res.json()
     ).then(
       data=> setBackendData(data)
