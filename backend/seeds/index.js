@@ -21,8 +21,8 @@ const codes = ['ma201','me101','eo201','ee221','ee261','h104'];
                 const data = {
                     name:subject[j],
                     code:codes[j],
-                    present: 0,
-                    total: 0
+                    present: Math.ceil(Math.random()*32),
+                    total: 32
                 }
                 //console.log(Math.ceil(Math.random()*t[j]))
                 courseData.push(data)
