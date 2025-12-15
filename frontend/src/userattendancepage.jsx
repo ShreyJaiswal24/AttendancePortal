@@ -8,7 +8,7 @@ function UserAttendancePage() {
   const {rollNo,course}=useParams()
   const [backendData,setBackendData]=useState(null)
   useEffect(()=>{
-    fetch(`http://localhost:3000/user/${rollNo}/${course}`)
+    fetch(`https://attendanceportalbackend.onrender.com/user/${rollNo}/${course}`)
     .then(res=>res.json())
     .then(data=>setBackendData(data))
   },[])
