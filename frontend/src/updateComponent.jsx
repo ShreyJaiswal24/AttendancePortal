@@ -7,7 +7,7 @@ import axios from "axios"
 function UpdateComponent({rollno}){
     const [backendData,setBackendData] = useState([]);
   useEffect(()=>{
-    fetch(`http://localhost:3000/user/${rollno}`).then(
+    fetch(`https://attendanceportalbackend.onrender.com/user/${rollno}`).then(
       res=> res.json()
     ).then(
       data=> setBackendData(()=> data)
