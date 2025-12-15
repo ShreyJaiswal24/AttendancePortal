@@ -30,13 +30,13 @@ function UpdateComponent({rollno}){
     // }
     const coursecode = ['ma201','me101','eo201','ee221','ee261','h104']
     const handleAbsent = (index)=>{
-      axios.put(`http://localhost:3000/update/${rollno}/${coursecode[index]}/absent`)
+      axios.put(`https://attendanceportalbackend.onrender.com/update/${rollno}/${coursecode[index]}/absent`)
       //.then((response)=>(setBackendData(()=>(response))))
       .then((response)=>(console.log('request successfull')))
       console.log({rollno,index})
     }
     const handlePresent = (index)=>{
-      axios.put(`http://localhost:3000/update/${rollno}/${coursecode[index]}/present`)
+      axios.put(`https://attendanceportalbackend.onrender.com/update/${rollno}/${coursecode[index]}/present`)
       //.then((response)=>(setBackendData(()=>(response))))
       .then((response)=>(console.log('request successfull')))
       console.log({rollno,index})
